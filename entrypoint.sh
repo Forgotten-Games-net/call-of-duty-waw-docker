@@ -30,7 +30,7 @@ if [ "${COD_GAME}" == "nomod" ]; then
                 1_7)
                     echo "---|  Remove binary and copy cracked one"
                     rm /gameserver/codwaw_lnxded-bin
-                    cp /opt/binarys/codwaw_lnxded-bin_original /gameserver/codwaw_lnxded-bin
+                    cp /opt/binaries/codwaw_lnxded-bin_original /gameserver/codwaw_lnxded-bin
                     chmod +x codwaw_lnxded-bin
                     echo "---|  Start Call of Duty WaW Server with Version ${COD_VERSION}"
                     ./codwaw_lnxded +set fs_basepath /gameserver ${STARTUP}
@@ -39,7 +39,7 @@ if [ "${COD_GAME}" == "nomod" ]; then
                 1_7_cracked)
                     echo "---|  Remove binary and copy cracked one"
                     rm /gameserver/codwaw_lnxded-bin
-                    cp /opt/binarys/codwaw_lnxded-bin_cracked /gameserver/codwaw_lnxded-bin
+                    cp /opt/binaries/codwaw_lnxded-bin_cracked /gameserver/codwaw_lnxded-bin
                     chmod +x codwaw_lnxded-bin
                     echo "---|  Start Call of Duty WaW Server with Version ${COD_VERSION}"
                     ./codwaw_lnxded +set fs_basepath /gameserver ${STARTUP}
@@ -56,7 +56,7 @@ if [ "${COD_GAME}" == "mod" ]; then
                 1_7)
                     echo "---|  Remove binary and copy cracked one"
                     rm /gameserver/codwaw_lnxded-bin
-                    cp /opt/binarys/codwaw_lnxded-bin_original /gameserver/codwaw_lnxded-bin
+                    cp /opt/binaries/codwaw_lnxded-bin_original /gameserver/codwaw_lnxded-bin
                     chmod +x codwaw_lnxded-bin
                     echo "---|  Start Call of Duty WaW Server with Version ${COD_VERSION}"
                     ./codwaw_lnxded +set fs_basepath /gameserver ${STARTUP}
@@ -65,7 +65,7 @@ if [ "${COD_GAME}" == "mod" ]; then
                 1_7_cracked)
                     echo "---|  Remove binary and copy cracked one"
                     rm /gameserver/codwaw_lnxded-bin
-                    cp /opt/binarys/codwaw_lnxded-bin_cracked /gameserver/codwaw_lnxded-bin
+                    cp /opt/binaries/codwaw_lnxded-bin_cracked /gameserver/codwaw_lnxded-bin
                     chmod +x codwaw_lnxded-bin
                     echo "---|  Start Call of Duty WaW Server with Version ${COD_VERSION}"
                     ./codwaw_lnxded +set fs_basepath /gameserver ${STARTUP}

@@ -1,5 +1,5 @@
 # --------------------------------------------------
-# Dockerfile for Call of Duty 4 
+# Dockerfile for Call of Duty 5 - WAW 
 # By FiSTWHO - Forgotten-Games.net
 # --------------------------------------------------
 FROM ubuntu:focal
@@ -28,7 +28,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Copy some files
 COPY config/* /opt/config/
-COPY binarys/* /opt/binarys/
+COPY binaries/* /opt/binaries/
 COPY ./entrypoint.sh /opt/entrypoint.sh
 RUN chmod +x /opt/entrypoint.sh
 

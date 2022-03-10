@@ -11,7 +11,7 @@ Here you get a Docker Image for the Game Call of Duty 5 - World at War. You can 
  - Download latest Serverfiles
  - Easy Mod Support
 
-| :warning: ATTENTION: IF YOU BUY THE GAME ON STEAM AND HAVE THE ONLINE PROFILE CREATION PROBLEM, TRY TO BUY A RETAIL KEY OR USE PLUTONIUM T4! :warning:|
+| :warning: ATTENTION: IF YOU BUY THE GAME ON STEAM AND HAVE THE ONLINE PROFILE CREATION PROBLEM, TRY TO BUY A RETAIL KEY OR USE [PLUTONIUM T4!](https://github.com/Forgotten-Games-net/call-of-duty-wawt4-docker) :warning:|
 | --- |
 
 ## 🚀 How to start
@@ -25,7 +25,7 @@ For a fast start simply
       -v <your/path/to/game/>:/config \
       -e COD_VERSION="1_7" \
       -e COD_GAME="nomod" \
-      -e STARTUP="+set fs_homepath config/default +set fs_savepath config/default +set dedicated 2 +set net_ip 0.0.0.0 +set net_port "28965" +exec server.cfg +map_rotate" \
+      -e STARTUP="+set fs_homepath config/default +set fs_localAppData config/default +set dedicated 2 +set net_ip 0.0.0.0 +set net_port "28965" +exec server.cfg +map_rotate" \
     keinnerd/codwawdocker:latest
 ```
 Then Check the `server.cfg` in the `config/default` dir. 
@@ -39,7 +39,7 @@ Then Check the `server.cfg` in the `config/default` dir.
 |----------------|-------------------------------|-----------------------------|
 |COD_VERSION     | Basic: `1_7` or `1.7 Cracked` | Choose your Game Version|
 |COD_GAME        | `nomod` or `mod` |`nomod` = Call of Duty WaW Vanilla / `mod` = Call of Duty WaW with Mod Options|
-|STARTUP         | "`+set fs_homepath config/default +set fs_savepath config/default +set dedicated 2 +set net_ip 0.0.0.0 +set net_port "28965" +exec server.cfg +map_rotate`" | Adjust your Start command (fs_basepath is hardcoded to /gameserver)
+|STARTUP         | "`+set fs_homepath config/default +set fs_localAppData config/default +set dedicated 2 +set net_ip 0.0.0.0 +set net_port "28965" +exec server.cfg +map_rotate`" | Adjust your Start command (fs_basepath is hardcoded to /gameserver)
 
 Hint: if you use the `mod` ENV you must adjust the Startup Comand and have to add `+set fs_game mods/yourmod`
 
@@ -65,7 +65,7 @@ If you want to play a Modification you need to upload your mod in the `gamedir` 
 
 - Change `COD_GAME` to `mod`
 - Change `COD_VERSION` to your needed Version
-- Change `STARTUP` to ` +set fs_game mods/YOURMOD +set fs_homepath config/YOURMOD/ +set dedicated 2 +set net_ip 0.0.0.0 +set net_port "28965" +exec YOURMOD.cfg +map_rotate`
+- Change `STARTUP` to ` +set fs_game mods/YOURMOD +set fs_homepath config/YOURMOD/ +set fs_localAppData config/YOURMOD +set dedicated 2 +set net_ip 0.0.0.0 +set net_port "28965" +exec YOURMOD.cfg +map_rotate`
 
 
 ## 📝 ToDo
